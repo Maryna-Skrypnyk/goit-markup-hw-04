@@ -15,6 +15,7 @@
   --black-color: #000000;
   --text-footer: rgba(255, 255, 255, 0.6);
   --secondary-bg-color: #f5f4fa;
+  --primary-fill-color: #afb1b8;
   --main-font: roboto, sans-serif;
   --secondary-font: raleway, sans-serif;
   --main-font-size: 14px;
@@ -151,6 +152,27 @@ body {
   text-decoration: none;
 }
 
+.icon-envelope {
+  margin-right: 10px;
+  width: 16px;
+  height: 12px;
+  fill: currentColor;
+}
+
+.icon-envelope:hover,
+.icon-envelope:focus,
+.icon-smartphone:hover,
+.icon-smartphone:focus {
+  fill: currentColor;
+}
+
+.icon-smartphone {
+  margin-right: 10px;
+  width: 10px;
+  height: 16px;
+  fill: currentColor;
+}
+
 /* Hero */
 
 /* временно с фоном для наглядности */
@@ -158,8 +180,30 @@ body {
 .hero {
   padding-top: 0;
   padding-bottom: 0;
-  background-color: #2f303a;
   text-align: center;
+}
+
+.overlay {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+  height: 600px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../images/hero.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #2f303a;
+}
+
+.container-header {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  width: 696px;
 }
 
 .hero-title {
@@ -251,6 +295,33 @@ section {
   font-weight: var(--primary-font-weight);
 }
 
+.feature-list .item::before {
+  content: '';
+  display: block;
+  margin-bottom: 30px;
+  height: 120px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-color: var(--secondary-bg-color);
+}
+
+.icon-antenna::before {
+  background-image: url('../images/svg/antenna.svg');
+}
+
+.icon-clock::before {
+  background-image: url('../images/svg/clock.svg');
+}
+
+.icon-diagram::before {
+  background-image: url('../images/svg/diagram.svg');
+}
+
+.icon-astronaut::before {
+  background-image: url('../images/svg/astronaut.svg');
+}
 /* Section works */
 
 .section-work {
