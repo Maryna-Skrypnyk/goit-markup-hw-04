@@ -462,6 +462,7 @@ section {
 .client-link:focus {
   color: var(--accent-color);
   border: 1px solid var(--accent-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .client-logo {
@@ -542,11 +543,6 @@ footer {
 .icon-network-company:focus {
   fill: currentColor;
 }
-/* 
-.address-footer {
-  width: 231px;
-  height: 81px;
-} */
 
 .address-footer > .logo {
   display: block;
@@ -633,6 +629,12 @@ footer {
 .project-list > .project {
   width: 370px;
   margin: 15px;
+}
+
+.project-list > .project:hover,
+.project-list > .project:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project a {
